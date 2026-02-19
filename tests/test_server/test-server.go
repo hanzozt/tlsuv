@@ -139,7 +139,7 @@ func init() {
 	templ := &x509.Certificate{
 		Subject: pkix.Name{
 			Country:      []string{"US"},
-			Organization: []string{"OpenZiti"},
+			Organization: []string{"Hanzo ZT"},
 			CommonName:   "Test Server",
 		},
 		DNSNames:    []string{"localhost"},

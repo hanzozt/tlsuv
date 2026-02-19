@@ -1026,7 +1026,7 @@ TEST_CASE("form test", "[http]") {
 
     tlsuv_http_pair req_form[] = {
             {"ziti", "is awesome!"},
-            {"message", "Check out https://openziti.io"},
+            {"message", "Check out https://hanzozt.io"},
     };
     tlsuv_http_req_form(req, 2, req_form);
 
@@ -1040,7 +1040,7 @@ TEST_CASE("form test", "[http]") {
     auto json = json_value_get_object(jval);
     auto form = json_object_dotget_object(json, "form");
     CHECK_THAT(json_array_get_string(json_object_dotget_array(form, "ziti"), 0), Equals("is awesome!"));
-    CHECK_THAT(json_array_get_string(json_object_dotget_array(form, "message"), 0), Equals("Check out https://openziti.io"));
+    CHECK_THAT(json_array_get_string(json_object_dotget_array(form, "message"), 0), Equals("Check out https://hanzozt.io"));
 
     std::cout << resp.req_body << std::endl;
 
@@ -1069,7 +1069,7 @@ TEST_CASE("form test too big", "[http]") {
     }
     tlsuv_http_pair req_form[] = {
             {"ziti", "is awesome!"},
-            {"message", "Check out https://openziti.io"},
+            {"message", "Check out https://hanzozt.io"},
             {"blob", blob.c_str()},
     };
     REQUIRE(tlsuv_http_req_form(req, 3, req_form) == UV_ENOMEM);

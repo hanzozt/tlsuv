@@ -276,7 +276,7 @@ TEST_CASE("read/write","[stream]") {
         });
 
         auto *wr = static_cast<uv_write_t *>(calloc(1, sizeof(uv_write_t)));
-        const char *msg = R"(GET /dns-query?name=openziti.org&type=A HTTP/1.1
+        const char *msg = R"(GET /dns-query?name=hanzozt.org&type=A HTTP/1.1
 Accept-Encoding: gzip, deflate
 Connection: close
 Host: 1.1.1.1

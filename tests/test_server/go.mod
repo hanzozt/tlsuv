@@ -1,4 +1,4 @@
-module github.com/openziti/tlsuv/test-server
+module github.com/hanzozt/tlsuv/test-server
 
 go 1.23.0
 

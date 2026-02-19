@@ -193,7 +193,7 @@ TEST_CASE("gen csr", "[engine]") {
     size_t pemlen = 0;
     CHECK(ctx->generate_csr_to_pem(key, &pem, &pemlen,
                                    "C", "US",
-                                   "O", "OpenZiti",
+                                   "O", "Hanzo ZT",
                                    "OU", "Developers",
                                    "CN", "CSR test",
                                    NULL) == 0);
@@ -204,7 +204,7 @@ TEST_CASE("gen csr", "[engine]") {
 
     CHECK(ctx->generate_csr_to_pem(key, &pem, nullptr,
                                    "C", "US",
-                                   "O", "OpenZiti",
+                                   "O", "Hanzo ZT",
                                    "OU", "Developers",
                                    "CN", "CSR test",
                                    NULL) == 0);

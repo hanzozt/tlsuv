@@ -1,4 +1,4 @@
-openssl req -x509 -newkey rsa:4096 -nodes -keyout ca.key -out ca.pem -sha256 -days 3650 -subj "/C=US/ST=New York/O=openziti.org/CN=test CA"
+openssl req -x509 -newkey rsa:4096 -nodes -keyout ca.key -out ca.pem -sha256 -days 3650 -subj "/C=US/ST=New York/O=hanzozt.org/CN=test CA"
 
 # server cert
 openssl genrsa -out server.key

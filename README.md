@@ -27,7 +27,7 @@ with [`FetchContent`](https://cmake.org/cmake/help/latest/module/FetchContent.ht
 
 ```cmake
     FetchContent_Declare(tlsuv
-            GIT_REPOSITORY https://github.com/openziti/tlsuv.git
+            GIT_REPOSITORY https://github.com/hanzozt/tlsuv.git
         GIT_TAG v0.40.0 # use latest release version
             )
     FetchContent_MakeAvailable(tlsuv)
@@ -75,10 +75,10 @@ for checking out samples, or contributing.
 ## Getting Help
 
 ------------
-Please use these community resources for getting help. We use GitHub [issues](https://github.com/openziti/tlsuv/issues)
+Please use these community resources for getting help. We use GitHub [issues](https://github.com/hanzozt/tlsuv/issues)
 for tracking bugs and feature requests and have limited bandwidth to address them.
 
-- Read [the docs](https://docs.openziti.io/)
-- Ask a question on [Discourse](https://openziti.discourse.group/)
+- Read [the docs](https://docs.hanzozt.dev/)
+- Ask a question on [Discourse](https://community.hanzozt.dev/)
 
 Copyright&copy; 2018-2024. NetFoundry, Inc.
