@@ -840,7 +840,7 @@ TEST_CASE("TLS verify with JWT", "[http]") {
     tlsuv_base64url_decode(dot + 1, &vtx.sig, &vtx.siglen);
 
     tls->set_cert_verify(tls.get(), cert_verify, &vtx);
-    tlsuv_http_init(test.loop, &clt, "https://demo4.ziti.netfoundry.io");
+    tlsuv_http_init(test.loop, &clt, "https://demo4.zt.netfoundry.io");
     tlsuv_http_set_ssl(&clt, tls.get());
 
     tlsuv_http_header(&clt, "Connection", "close");
@@ -1025,7 +1025,7 @@ TEST_CASE("form test", "[http]") {
     tlsuv_http_req_t *req = tlsuv_http_req(&clt, "POST", "/post", resp_capture_cb, &resp);
 
     tlsuv_http_pair req_form[] = {
-            {"ziti", "is awesome!"},
+            {"zt", "is awesome!"},
             {"message", "Check out https://hanzozt.io"},
     };
     tlsuv_http_req_form(req, 2, req_form);
@@ -1039,7 +1039,7 @@ TEST_CASE("form test", "[http]") {
     auto jval = json_parse_string(resp.body.c_str());
     auto json = json_value_get_object(jval);
     auto form = json_object_dotget_object(json, "form");
-    CHECK_THAT(json_array_get_string(json_object_dotget_array(form, "ziti"), 0), Equals("is awesome!"));
+    CHECK_THAT(json_array_get_string(json_object_dotget_array(form, "zt"), 0), Equals("is awesome!"));
     CHECK_THAT(json_array_get_string(json_object_dotget_array(form, "message"), 0), Equals("Check out https://hanzozt.io"));
 
     std::cout << resp.req_body << std::endl;
@@ -1068,7 +1068,7 @@ TEST_CASE("form test too big", "[http]") {
         blob.append(&c, 1);
     }
     tlsuv_http_pair req_form[] = {
-            {"ziti", "is awesome!"},
+            {"zt", "is awesome!"},
             {"message", "Check out https://hanzozt.io"},
             {"blob", blob.c_str()},
     };
